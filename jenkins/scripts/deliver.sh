@@ -23,4 +23,5 @@ set +x
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
-java -jar target/${NAME}-${VERSION}.jar
+cp target/${NAME}-${VERSION}.jar /var/lib/your-project-name
+systemctl restart your-project-name.service
